@@ -13,7 +13,7 @@ def ask_options():
             print("You need to put an integer.")
 
     choice = input("Do you want to modify your password generation settings? (Default are lowercase + capital + numbers + symbols)(Y/n): ").lower()
-    if choice == "yes" | choice == "y":
+    if choice == "yes" or choice == "y":
             options[0] = input("Want lowercase letters in your password? (Y/n):").lower()
             options[1] = input("Want capital letters in your password? (Y/n)").lower()
             options[2] = input("Want numbers in your password? (Y/n): ").lower()
@@ -30,13 +30,13 @@ def generate_password():
     
     psw_builder = ""
     
-    if opts[0] == "yes" | opts[0] == "y":
+    if opts[0] == "yes" or opts[0] == "y":
         psw_builder += capital_letters
-    if opts[1] == "yes" | opts[1] == "y":
+    if opts[1] == "yes" or opts[1] == "y":
         psw_builder += lowercase_letters
-    if opts[2] == "yes" | opts[2] == "y":
+    if opts[2] == "yes" or opts[2] == "y":
         psw_builder += numbers
-    if opts[3] == "yes" | opts[3] == "y":
+    if opts[3] == "yes" or opts[3] == "y":
         psw_builder += symbols
 
     password = "".join(random.sample(psw_builder,psw_len))
