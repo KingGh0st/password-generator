@@ -41,3 +41,5 @@ def generate_password():
 
     password = "".join(random.sample(psw_builder,psw_len))
     print(password)
+
+generate_password()
